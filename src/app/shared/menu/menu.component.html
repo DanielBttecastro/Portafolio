@@ -1,0 +1,27 @@
+<div class="h-24 w-full bg-white shadow-lg flex items-center justify-between px-6">
+  <div class="flex items-center">
+    <img src="Foto-perfil.png" class="h-14" alt="Foto de perfil">
+    <span class="ml-4 text-xl font-semibold font-inter">Daniel Bustamante</span>
+  </div>
+  <div class="flex    md:hidden">
+    <svg *ngIf="ocultarMenu" (click)="desplegarMenu()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+      stroke="currentColor" class="h-12">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+    <svg *ngIf="!ocultarMenu" (click)="desplegarMenu()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+      stroke="currentColor" class="h-12">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+  </div>
+  <div class="items-center hidden md:flex">
+    <a class="py-10 px-10 text-xl font-inter font-bold hover:text-fondo">Inicio</a>
+    <a class="py-10 px-10 text-xl font-inter font-bold hover:text-fondo">Contáctame</a>
+    <a class="py-10 px-10 text-xl font-inter font-bold hover:text-fondo">Proyectos</a>
+  </div>
+</div>
+<div *ngIf="!ocultarMenu" class="text-end flex flex-col items-center bg-white md:hidden shadow-lg z-10">
+  <a class="py-5 px-10 w-full text-xl font-inter font-bold border-t border-gray-400 hover:text-Fondo">Inicio</a>
+  <a class="py-5 px-10 w-full text-xl font-inter font-bold border-y border-gray-400 hover:text-Fondo">Contáctame</a>
+  <a class="py-5 px-10 w-full text-xl font-inter font-bold hover:text-Fondo">Proyectos</a>
+</div>
