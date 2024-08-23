@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
 
 @Component({
-  selector: 'app-gestor-ppi',
+  selector: 'app-libreria',
   standalone: true,
   imports: [SharedModule],
-  templateUrl: './gestor-ppi.component.html',
-  styleUrl: './gestor-ppi.component.scss'
+  templateUrl: './libreria.component.html',
+  styleUrl: './libreria.component.scss'
 })
-export class GestorPPIComponent {
+export class LibreriaComponent {
 
 }

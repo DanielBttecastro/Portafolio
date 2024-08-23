@@ -1,0 +1,45 @@
+<div class="flex  justify-center pb-20">
+  <div class="w-full px-28 max-w-5xl">
+    <div class="flex justify-start">
+      <p class="text-2xl font-inter  font-semibold">Resumen del proyecto</p>
+    </div>
+    <div class="flex-col justify-center ">
+      @for (descr of DescripcionCompleta; track descr.desc) {
+      <p class="text-xl font-inter mt-5">
+        {{descr.desc}}
+      </p>
+      }
+    </div>
+    <div class="flex justify-start mt-9">
+      <p class="text-2xl font-inter  font-semibold">Herramientas utilizadas</p>
+    </div>
+    <div class="flex-col justify-center mt-5">
+      <div class="mt-5 flex-wrap flex">
+        @for (her of Herramientas; track her.id) {
+        <div class="mx-2 my-4">
+          <span class="px-4 py-3 rounded-md font-bold font-inter text-md text-gray-600 bg-gray-300">{{her.her}}</span>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="flex justify-start mt-9">
+      <p class="text-2xl font-inter  font-semibold">Repositorio</p>
+    </div>
+    <div class="flex justify-start mt-9">
+      @for (btn of Botones; track btn.nombre) {
+      <div class="ml-5">
+        <a href="{{btn.URL}}" target="_blank"
+          class="bg-fondo cursor-pointer hover:bg-fondoOscuro rounded-lg px-5 py-3 text-2xl font-inter mt-14 font-bold text-white hover:-translate-y-1 hover:scale-110 transition-transform duration-300">
+          {{btn.Nombre}}
+        </a>
+      </div>
+      }
+      <div class="ml-5">
+        <a href="/portafolio"
+          class="bg-gray-50 mt-14 border-fondo border-2 cursor-pointer  hover:border-fondoOscuro hover:text-fondoOscuro rounded-lg px-5 py-3 text-2xl font-inter   font-bold text-fondo hover:-translate-y-1 hover:scale-110 transition-transform duration-300">
+          Atras
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

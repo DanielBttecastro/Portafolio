@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GestorPPIComponent } from './gestor-ppi.component';
+import { LibreriaComponent } from './libreria.component';
 
-describe('GestorPPIComponent', () => {
-  let component: GestorPPIComponent;
-  let fixture: ComponentFixture<GestorPPIComponent>;
+describe('LibreriaComponent', () => {
+  let component: LibreriaComponent;
+  let fixture: ComponentFixture<LibreriaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GestorPPIComponent]
+      imports: [LibreriaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GestorPPIComponent);
+    fixture = TestBed.createComponent(LibreriaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
