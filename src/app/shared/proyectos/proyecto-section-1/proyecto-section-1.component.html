@@ -2,9 +2,8 @@
   class="z-10 absolute mt-10 top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center">
   <p class="text-5xl mt-24 font-bold font-inter">{{Nombre}}</p>
   <p class="text-2xl mt-14 font-inter">{{Descripcion}}</p>
-  @if (Botones.length==2) {
-  <p class="text-2xl m-5 font-bold font-inter">Repositorio Git Hub</p>
-  <div class="md:grid-cols-2 grid-cols-1 grid gap-7 p-5 md:gap-5 md:p-5">
+  <p class="text-2xl m-5 font-bold font-inter" *ngIf="Botones.length > 1">Repositorio Git Hub</p>
+  <div [ngClass]="getGridClass()">
     @for (btn of Botones; track btn.Nombre) {
     <div><a target="_blank"
         class="bg-fondo cursor-pointer hover:bg-fondoOscuro rounded-lg mt-14 px-5 py-3 text-2xl font-inter font-bold text-white hover:-translate-y-1 hover:scale-110 transition-transform duration-300"
@@ -12,12 +11,5 @@
     }
   </div>
 
-  }@else {
-  <div class="grid-cols-1 grid gap-7 p-5 md:gap-5 md:p-5">
-    <div><a target="_blank"
-        class="bg-fondo cursor-pointer hover:bg-fondoOscuro rounded-lg mt-14 px-5 py-3 text-2xl font-inter font-bold text-white hover:-translate-y-1 hover:scale-110 transition-transform duration-300"
-        href="{{Botones.URL}}"> {{Botones.Nombre}} </a></div>
-  </div>
-  }
 
 </div>
